@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Inscrivez-vous</h1>
+                    <h6>Veuillez entrer vos coordonnées</h6>
+                </div>
+                <form >
+                    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nom et Prénom</label>
+                            <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrez votre nom et prénom">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Tél</label>
+                            <input formControlName="tel" type="number" class="form-control" id="exampleInputPassword1" placeholder="Numéro de téléphone">
+                          </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+                          <small id="emailHelp" class="form-text text-muted">Nous ne communiquerons jamais votre adresse électronique à qui que ce soit.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="signup" class="btn btn-primary">Enregistrez</button>
+
+                      </form>
+                      <a style="color: #fff; margin-top: 50px; text-decoration: none;" routerLink="/login">Vous etes déjà inscrit? <span style="text-decoration: underline;">Connectez-vous!</span></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
